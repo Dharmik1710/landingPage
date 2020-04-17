@@ -43,6 +43,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styleNEW.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 </head>
 
 <body class="animated-bg">
@@ -126,26 +127,26 @@
   </div>
   <!-- END -->
 
-  <div class="container feature-box" id="features">
+  <div class="container-fluid feature-box" id="features">
     <div class="row">
       <div class="col">
-        <h1 class="text-center">Features</h1>
+        <h1 class="text-center">A <span id="typedElem"></span> to legal research...</h1>
         <div class="text-secondary display-5 text-center">Gain a competitive edge with LegalMind's game-changing features. Enable data-driven decision making and build case winning strategies.</div>
       </div>
     </div>
-      <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+      <div class="cta-container my-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
           <div class="cta-content">
-              <h3>AI Semantic Search Engine</h3>
+              <h1 class="font-weight-bolder">AI Powered Search</h1>
               <p class="line"></p>
               <p class="mt-2 text-justify text-secondary">A state-of-the-art context-based search engine that seeks to improve search
                 accuracy by understanding searcher’s intent and the contextual meaning of terms as they appear in the
                 searchable dataspace.
               </p>
-              <a href="#" class="btn btn-primary mt-2" target="_blank">Search now <i
+              <a href="#" class="btn btn-primary mt-2" target="_blank">Try now<i
                 class="fa fa-angle-double-right ml-2"></i></a>    
           </div>
           <div class="cta-device">
-              <img src="./assets/images/imgLandingPage/Dashboard-1 – 3.png" class=" shadow-lg">
+              <img src="./assets/images/imgLandingPage/Dashboard-1 – 3.png" class="shadow-lg">
           </div>
       </div>
 
@@ -154,14 +155,14 @@
             <img src="./assets/images/imgLandingPage/Dashboard-2.png" class=" shadow-lg">
         </div>
         <div class="cta-content">
-          <h3>Litigation Anaytics</h3>
+          <h1>Litigation Anaytics</h1>
           <p class="line"></p>
           <p class="mt-2 text-justify text-secondary">Get a competitive edge by using analytics to uncover trends and patterns across
             millions of judgments. Predict the behaviour of the court, judges, lawyers and parties with the help of
             visualisations and data analytics techniques and build strategies by taking data-driven decisions to have an
             edge over your opposite counsel at the court proceedings.
           </p>
-          <a href="#" class="btn btn-primary mt-2" target="_blank">Try Litigation Analytics now <i
+          <a href="#" class="btn btn-primary mt-2" target="_blank">Try now <i
             class="fa fa-angle-double-right ml-2"></i> </a>
       </div>
 
@@ -169,13 +170,13 @@
 
     <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
       <div class="cta-content">
-          <h3>Brief Analyser</h3>
+          <h1>Brief Analyser</h1>
           <p class="line"></p>
           <p class="mt-2 text-justify text-secondary">Witness your multi-page judgement transform into a crisp summary without
             missing out on any minute details. The summariser runs on an NLP engine that understands the caseflow and outputs the
             most relevant arguments, facts and issues that leads to declaring the verdict of the case.
           </p>
-          <a href="" class="btn btn-primary mt-2" target="_blank">Try Brief Analyser now <i
+          <a href="" class="btn btn-primary mt-2" target="_blank">Try now <i
             class="fa fa-angle-double-right ml-2"></i></a>
       </div>
       <div class="cta-device">
@@ -547,6 +548,21 @@
     AOS.init({
       duration:1000
       });
+
+    // if($(window).width() <= 768) {
+    //     $('').click();
+    // }
+
+    var typed3 = new Typed('#typedElem', {
+      strings: ['way', 'smarter way'],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 500,
+      startDelay: 1000,
+      smartBackspace: true, // this is a default
+      loop: true
+
+    });
 </script>
 </body>
 
