@@ -1237,7 +1237,7 @@ form {
 }
 @media only screen and (min-width: 768px) {
   .cta-container .cta-content {
-    width: 60%;
+    width: 70%;
   } 
   .cta-content:nth-child(odd){
     padding: 0 60px 0 0; 
@@ -1261,6 +1261,9 @@ form {
     width: 100%;
     padding: 0;
   } 
+  /* .cta-device:nth-child(2) {
+    width: 70%;
+  } */
 }
 
 .cta-device img{
