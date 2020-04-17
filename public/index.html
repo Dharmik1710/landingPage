@@ -127,14 +127,14 @@
   </div>
   <!-- END -->
 
-  <div class="container-fluid feature-box" id="features">
+  <div class="container-fluid feature-box pt-lg-5" id="features">
     <div class="row">
       <div class="col">
         <h1 class="text-center">A <span id="typedElem"></span> to legal research...</h1>
         <div class="text-secondary display-5 text-center">Gain a competitive edge with LegalMind's game-changing features. Enable data-driven decision making and build case winning strategies.</div>
       </div>
     </div>
-      <div class="cta-container my-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+      <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
           <div class="cta-content">
               <h1 class="font-weight-bolder">AI Powered Search</h1>
               <p class="line"></p>
@@ -142,6 +142,7 @@
                 accuracy by understanding searcher’s intent and the contextual meaning of terms as they appear in the
                 searchable dataspace.
               </p>
+              <p></p>
               <a href="#" class="btn btn-primary mt-2" target="_blank">Try now<i
                 class="fa fa-angle-double-right ml-2"></i></a>    
           </div>
@@ -152,10 +153,21 @@
 
       <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
         <div class="cta-device">
-            <img src="./assets/images/imgLandingPage/Dashboard-2.png" class=" shadow-lg">
+            <img src="./assets/images/img2.png" class="mr-lg-5">
         </div>
         <div class="cta-content">
-          <h1>Litigation Anaytics</h1>
+          <h1 class="font-weight-bolder">Ai-Powered LexTracts</h1>
+          <p class="line"></p>
+          <p class="mt-2 text-justify text-secondary">Get the most relevant contents out of a judgment.Use Lextracts to quickly get a context of a judgment
+          </p>
+          <a href="#" class="btn btn-primary mt-2" target="_blank">Try now <i
+            class="fa fa-angle-double-right ml-2"></i> </a>
+        </div>
+      </div>
+
+      <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+        <div class="cta-content">
+          <h1 class="font-weight-bolder">Litigation Anaytics</h1>
           <p class="line"></p>
           <p class="mt-2 text-justify text-secondary">Get a competitive edge by using analytics to uncover trends and patterns across
             millions of judgments. Predict the behaviour of the court, judges, lawyers and parties with the help of
@@ -164,13 +176,18 @@
           </p>
           <a href="#" class="btn btn-primary mt-2" target="_blank">Try now <i
             class="fa fa-angle-double-right ml-2"></i> </a>
+        </div>
+        <div class="cta-device">
+            <img src="./assets/images/imgLandingPage/Dashboard-2.png" class=" shadow-lg">
+        </div>
       </div>
 
-    </div>
-
     <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+      <div class="cta-device">
+          <img src="./assets/images/imgLandingPage/Deeplex-1.png" class=" shadow-lg">
+      </div>
       <div class="cta-content">
-          <h1>Brief Analyser</h1>
+          <h1 class="font-weight-bolder">Brief Analyser</h1>
           <p class="line"></p>
           <p class="mt-2 text-justify text-secondary">Witness your multi-page judgement transform into a crisp summary without
             missing out on any minute details. The summariser runs on an NLP engine that understands the caseflow and outputs the
@@ -179,9 +196,7 @@
           <a href="" class="btn btn-primary mt-2" target="_blank">Try now <i
             class="fa fa-angle-double-right ml-2"></i></a>
       </div>
-      <div class="cta-device">
-          <img src="./assets/images/imgLandingPage/Deeplex-1.png" class=" shadow-lg">
-      </div>
+
   </div>
 
   </div>
@@ -554,14 +569,13 @@
     // }
 
     var typed3 = new Typed('#typedElem', {
-      strings: ['way', 'smarter way'],
+      strings: ['way', 'smarter way'.bold()],
       typeSpeed: 150,
       backSpeed: 100,
       backDelay: 500,
       startDelay: 0,
       smartBackspace: true, // this is a default
       loop: true
-
     });
 </script>
 </body>
