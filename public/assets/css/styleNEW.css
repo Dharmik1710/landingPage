@@ -1207,6 +1207,10 @@ form {
   background-position: top center;
 }
 
+#featuresHead{
+  font-size: 50px;
+}
+
 .bubble-tree {
   background-size: auto 150vh;
   width: 100%;
@@ -1239,10 +1243,10 @@ form {
     width: 70%;
     font-size: 20px;
   } 
-  #lectracts .cta-content{
+  /* #lectracts .cta-content{
     width: 50%;
     padding-left: 130px;
-  }
+  } */
   .cta-content:nth-child(odd){
     padding: 0 60px 0 0; 
   }
@@ -1253,24 +1257,9 @@ form {
   #lextracts .cta-device{
     width: 35%;
   }
-
 }
-
-/* .cta-container .cta-device {
-  text-align: right;
-} */
-
-
-/* @media only screen and (min-width: 768px) {
-  .cta-container .cta-device {
-    width: 100%;
-    padding: 0;
-  } 
-} */
-
 .cta-device img{
   width: 100%;
-  vertical-align: top;
 }
 
 .display-5{
