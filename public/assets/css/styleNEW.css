@@ -1118,12 +1118,6 @@ h6 {
   margin-top: 10vh;
 }
 
-@media(min-width:1200px) {
-  #features{
-    padding: 0 15vh;
-  }
-}
-
 form {
   width: 100%;
 }
@@ -1225,6 +1219,11 @@ form {
   background-repeat: no-repeat;
 }
 
+@media(min-width:1200px) {
+  #features{
+    padding: 0 16vh;
+  }
+}
 .cta-container {
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -1232,40 +1231,42 @@ form {
 @media only screen and (min-width: 768px) {
   .cta-container {
     display: flex;
-    /* align-items: flex-end;  */
+    /* align-items: center;  */
   } 
 }
 @media only screen and (min-width: 768px) {
   .cta-container .cta-content {
     width: 70%;
+    font-size: 20px;
   } 
+  #lectracts .cta-content{
+    width: 50%;
+    padding-left: 130px;
+  }
   .cta-content:nth-child(odd){
     padding: 0 60px 0 0; 
   }
   .cta-content:nth-child(even){
     padding: 0 0 0 60px; 
   }
+  /* lectracts design */
+  #lextracts .cta-device{
+    width: 35%;
+  }
+
 }
 
-.cta-container .cta-device {
+/* .cta-container .cta-device {
   text-align: right;
-  vertical-align: top;
-}
+} */
 
-/* lectracts design */
-#lextracts .cta-device{
-  width: 40%;
-}
-#lectracts .cta-content{
-  width: 100%;
-}
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .cta-container .cta-device {
     width: 100%;
     padding: 0;
   } 
-}
+} */
 
 .cta-device img{
   width: 100%;
