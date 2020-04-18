@@ -1261,9 +1261,9 @@ form {
     width: 100%;
     padding: 0;
   } 
-  /* .cta-device:nth-child(2) {
-    width: 70%;
-  } */
+  .cta-content:nth-child(2) {
+    width: 100%;
+  }
 }
 
 .cta-device img{
