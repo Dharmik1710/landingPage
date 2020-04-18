@@ -1246,24 +1246,25 @@ form {
     padding: 0 0 0 60px; 
   }
 }
-/* .cta-container .cta-content h3 {
-  color: #fff;
-  text-align: left;
-  margin-top: 0; 
-} */
+
 .cta-container .cta-device {
   text-align: right;
-  border-radius: 15px;
   vertical-align: top;
 }
+
+/* lectracts design */
+#lextracts .cta-device{
+  width: 40%;
+}
+#lectracts .cta-content{
+  width: 100%;
+}
+
 @media only screen and (min-width: 768px) {
   .cta-container .cta-device {
     width: 100%;
     padding: 0;
   } 
-  .cta-content:nth-child(2) {
-    width: 100%;
-  }
 }
 
 .cta-device img{
