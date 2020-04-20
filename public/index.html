@@ -61,7 +61,7 @@
                 style="line-height: 60px; font-size: 2em;color : white">LegalMind</span></div>
           </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -127,17 +127,17 @@
   </div>
   <!-- END -->
 
-  <div class="container-fluid feature-box pt-lg-5" id="features">
+  <div class="container feature-box col-12" id="features">
     <div class="row">
       <div class="col">
-        <h1 class="text-center" id="featuresHead">A <span id="typedElem1"></span> to legal research...</h1>
+        <h1 class="text-center" id="featuresHead">A <span id="typedElem1"></span> to<span class="mobFeaturesHead"></span> legal research...</h1>
         <div class="text-secondary display-5 text-center">Gain a competitive edge with LegalMind's game-changing features. Enable data-driven decision making and build case winning strategies.</div>
       </div>
     </div>
-      <div class="cta-container my-lg-5 pb-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+      <div class="cta-container my-lg-5 pb-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" id="feature1">
           <div class="cta-content">
-              <h1 class="font-weight-bolder"><span id="typedElem2"></span></h1>
-              <h1 class="font-weight-bolder">Powered Search</h1>
+              <h2 class="font-weight-bolder"><span id="typedElem2"></span></h2>
+              <h2 class="font-weight-bolder">Powered Search</h2>
               <p class="line"></p>
               <p class="mt-2 text-justify text-secondary">A state-of-the-art context-based search engine that seeks to improve search
                 accuracy by understanding searcher’s intent and the contextual meaning of terms as they appear in the
@@ -152,13 +152,13 @@
           </div>
       </div>
 
-      <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" id="lextracts">
+      <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" id="feature2">
         <div class="cta-device">
             <img src="./assets/images/img2-1.png">
         </div>
         <div class="cta-content">
-          <h1 class="font-weight-bolder">Try Artificial Intelligence</h1>
-          <h1 class="font-weight-bolder">Powered <span id="typedElem3"></span></h1>    
+          <h2 class="font-weight-bolder">Try Artificial Intelligence</h2>
+          <h2 class="font-weight-bolder">Powered <span id="typedElem3"></span></h2>    
           <p class="line"></p>
           <p class="mt-2 text-justify text-secondary">Get the most relevant contents out of a judgment. Use Lextracts to quickly get a context of a judgment. </p>
           <a href="#" class="btn btn-warning mt-2 px-4" target="_blank">Try now <i
@@ -166,9 +166,9 @@
         </div>
       </div>
 
-      <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+      <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" id="feature3">
         <div class="cta-content">
-          <h1 class="font-weight-bolder">Litigation <span id="typedElem4"></span></h1>
+          <h2 class="font-weight-bolder">Litigation <span id="typedElem4"></span></h2>
           <p class="line"></p>
           <p class="mt-2 text-justify text-secondary">Get a competitive edge by using analytics to uncover trends and patterns across
             millions of judgments. Predict the behaviour of the court, judges, lawyers and parties with the help of
@@ -183,12 +183,12 @@
         </div>
       </div>
 
-    <div class="cta-container my-lg-5 py-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+    <div class="cta-container my-lg-5 pt-lg-5" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" id="feature4">
       <div class="cta-device">
           <img src="./assets/images/imgLandingPage/Deeplex-1.png" class=" shadow-lg">
       </div>
       <div class="cta-content">
-          <h1 class="font-weight-bolder">Brief <span id="typedElem5"></span></h1>
+          <h2 class="font-weight-bolder">Brief <span id="typedElem5"></span></h2>
           <p class="line"></p>
           <p class="mt-2 text-justify text-secondary">Witness your multi-page judgement transform into a crisp summary without
             missing out on any minute details. The summariser runs on an NLP engine that understands the caseflow and outputs the
@@ -558,63 +558,59 @@
   <script src=".assets/js/textanimation.js"></script>
   <script src="assets/js/testimonials.js"></script>
   <script src=".assets/js/accordion.js"></script>
-  <script src="assets/js/bubbleTree.js"></script>
+  <!-- <script src="assets/js/bubbleTree.js"></script> -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
       duration:1000
       });
 
-    // if($(window).width() <= 768) {
-    //     $('').click();
-    // }
+    if($(window).width() <= 768) {
+        $("#feature2 .cta-device").insertAfter("#feature2 .cta-content");
+        $("#feature4 .cta-device").insertAfter("#feature4 .cta-content");
+    }
+
+    if($(window).width() <= 768) {
+        $('#featuresHead .mobFeaturesHead').html('<br>');
+    }
 
     var typed1 = new Typed('#typedElem1', {
       strings: ['way', 'smarter way'.bold()],
-      typeSpeed: 50,
-      backSpeed: 00,
+      typeSpeed: 100,
+      backSpeed: 100,
       backDelay: 800,
       startDelay: 0,
       smartBackspace: true, // this is a default
       loop: true
     });
-
+    console.log(typed1)
     var typed2 = new Typed('#typedElem2', {
       strings: ['Artificial Intelligence'],
       typeSpeed: 50,
       backSpeed: 50,
-      backDelay: 800,
+      backDelay: 1000,
       startDelay: 0,
       loop: true
     });
-
-
     var typed3 = new Typed('#typedElem3', {
       strings: [' Lectracts'],
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 800,
+      typeSpeed: 75,
+      backSpeed: 75,
+      backDelay: 1000,
       startDelay: 0,
       loop: true
     });
+    
+    var opt4 = typed3.options
+    opt4.strings = ['Analytics']
+    var typed4 = new Typed('#typedElem4', opt4)
 
-    var typed4 = new Typed('#typedElem4', {
-      strings: ['Analytics'],
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 800,
-      startDelay: 0,
-      loop: true
-    });
+    var opt5 = typed3.options
+    opt5.strings = ['Analyser']
+    var typed5 = new Typed('#typedElem5', opt5);
 
-    var typed5 = new Typed('#typedElem5', {
-      strings: ['Analyser'],
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 800,
-      startDelay: 0,
-      loop: true
-    });
+
+
 </script>
 </body>
 
