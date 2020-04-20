@@ -1230,7 +1230,7 @@ form {
   border-radius: 10px;
 }
 
-@media only screen and (min-width: 1351px) {
+@media only screen and (min-width: 1200px) {
   #features.feature-box{
     width: calc(100% - 20vh);
     margin: 2vh 10vh;
@@ -1241,7 +1241,7 @@ form {
   } 
   .cta-container .cta-content {
     width: 60%;
-    font-size: 20px;
+    font-size: 18px;
   } 
   .cta-content:nth-child(odd){
     padding: 0 60px 0 0; 
@@ -1255,43 +1255,15 @@ form {
   }
 }
 
-@media only screen and (max-width: 1350px){
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
   #features.feature-box{
-    width: calc(100% - 6vh);
-    margin: 2vh 3vh;
-  }
-  #features h2{
-    font-size: 27px;
-  }
-  .cta-container {
-    display: flex;
-  } 
-  .cta-container .cta-content {
-    width: 80%;
-    font-size: 20px;
-  } 
-  .cta-content:nth-child(odd){
-    padding: 0 60px 0 0; 
-  }
-  .cta-content:nth-child(even){
-    padding: 0 0 0 60px; 
-  }
-  /* lectracts design */
-  #feature2 .cta-device{
-    width: 30%;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1023px) {
-  #features.feature-box{
-    width: 100%;
     padding: 10vh 10vh 0 10vh;
     margin-top: 0 !important;
     font-size: 20px;
   }
   #features h2{
     font-size: 40px;
-    margin: 0;
+    margin: 1vh 0 2vh 0;
   }
   .cta-device{
     margin: 4vh 0 10vh 0;
@@ -1300,7 +1272,7 @@ form {
     margin-bottom: 0 !important;
   }
   #feature1{
-    margin-top: 6vh;
+    margin-top: 10vh;
   }
   #feature2 .cta-device img{
     width: 50%;
@@ -1309,10 +1281,6 @@ form {
     display: flex;
     justify-content: center;
   }
-  #features .line{
-    margin: 1vh 0 2vh 0;
-  }
-
 }
 
 @media only screen and (max-width: 600px) {
