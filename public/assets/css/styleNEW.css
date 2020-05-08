@@ -44,7 +44,9 @@ body {
   background-position: 60vh -64vh;
   background-size: 200vh 200vh;
   border-radius: 0px !important;
+  background-blend-mode: multiply;
 }
+
 #loader { 
   border: 12px solid #2F3FB1; 
   border-radius: 50%; 
@@ -96,6 +98,43 @@ a:hover {
   padding-bottom: 1.2vh;
   position: relative;
   /* left: 7%; */
+}
+
+#navbarNav .pri-menu{
+  list-style-type: none;
+  background-color: #2057c4;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  padding: 7px 0;
+  z-index: 999;
+  margin-top: 10px;
+}
+
+#navbarNav .pri-menu li{
+  padding: 5px 15px;
+  width: 200px;
+}
+
+#prodMenu li:hover{
+  background-color: blue;
+}
+
+#navbarNav .sec-menu{
+  list-style-type: none;
+  background-color: #2057c4;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  padding: 7px 0;
+  z-index: 999;
+  margin-left: 190px;
+  margin-top: -36px;
+}
+
+#navbarNav .sec-menu li{
+  padding: 5px 15px;
+  width: 200px;
 }
 
 
@@ -489,10 +528,6 @@ a:hover {
 
 .copyright {
   background: #033B77;
-}
-
-.fa {
-  /* vertical-align: middle; */
 }
 
 /* Testimonials */
