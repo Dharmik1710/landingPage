@@ -44,6 +44,7 @@
   <link rel="stylesheet" href="assets/css/styleNEW.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
 </head>
 
 <body class="animated-bg">
@@ -67,11 +68,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <!-- <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li> -->
-            <li class="nav-item"><a href="#footer" class="nav-link">Contact Us</a></li>
-            <li class="nav-item"><a href="https://summarizer.legalmind.tech/" class="btn btn-warning ml-lg-4"
-                target="_blank">Go To AI-Summariser</a>
+            <li class="nav-item mx-3"><a href="vision.html" class="nav-link">Vision</a></li>
+            <li class="nav-item mx-3"><a href="#" class="nav-link" id="prod">Products</a>
+              <ul class="pri-menu" id="prodMenu">
+                <a href="#"><li class="nav-item">Researcher</li></a>
+                <a href="#"><li class="nav-item">Ai Summarizer</li></a>
+                <a href="#"><li class="nav-item">Word Addins</li></a>
+                <a href="#"><li class="nav-item" id="legalInt">Legal Intelligence<span class="float-right"><i class="fa fa-angle-right fa-fw" style="line-height: 1.3rem;"></i></span>
+                  <ul class="sec-menu" id="liMenu">
+                    <a href="#"><li class="nav-item">Insolvency</li></a>
+                    <a href="#"><li class="nav-item">Antitrust</li></a>
+                    <a href="#"><li class="nav-item">Company</li></a>    
+                    <a href="#"><li class="nav-item">Tax</li></a>
+                    <a href="#"><li class="nav-item">Supreme Court</li></a>
+                  </ul>
+                </li></a>
+                <a href="#"><li class="nav-item">Information Center</li></a>
+              </ul>
             </li>
+            <li class="nav-item mx-3"><a href="#" class="nav-link">Blogs</a></li>
+            <li class="nav-item mx-3"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item mx-3"><a href="#footer" class="nav-link">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -583,7 +600,6 @@
       smartBackspace: true, // this is a default
       loop: true
     });
-    console.log(typed1)
     var typed2 = new Typed('#typedElem2', {
       strings: ['Artificial Intelligence'],
       typeSpeed: 50,
@@ -609,7 +625,46 @@
     opt5.strings = ['Analyser']
     var typed5 = new Typed('#typedElem5', opt5);
 
+    $(document).ready(function(){
+      $('#prod').hover(function(){
+        $('#navbarNav .pri-menu').show();
+      //   $('.pri-menu #legalInt').hover(function(){
+      //     $('.pri-menu .sec-menu').show();
+      //   });
+        $('#legalInt').mouseover(function(){
+          $('#liMenu').show();
+        });
+        $('#prod').mouseover(function(){
+          $('#prodMenu').show();
+        });
 
+        // $('#legalIn').hover(function(){
+        //   $('#prodMenu').hide();
+        // });
+      
+      });
+
+      // $('#').mouseout(function(){
+      //   $('#prod').hide();
+      // });
+
+      $('#legalInt').mouseout(function(){
+        $('#liMenu').mouseover(function(){
+          $('#liMenu').show();
+        })
+      });
+
+      $('#legalInt').mouseout(function(){
+        $('#liMenu').mouseout(function(){
+          $('#liMenu').hide();
+        })
+      });
+
+
+      $('#navbarNav .pri-menu').hide();
+      $('.pri-menu .sec-menu').hide();
+  
+    });
 
 </script>
 </body>
