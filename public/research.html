@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>LegalMind | Vision</title>
+  <title>LegalMind | Researcher</title>
   <link rel="icon" type="image" href="assets/images/favicons.ico" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,28 +20,62 @@
     #content p{
       font-size: 20px;
     }
+    .tool img{
+        width: 30%;
+        border: 20px solid black;
+        border-radius: 20px;
+        padding: 1px;      
+        box-shadow: 1px 1px 10px rgb(37, 37, 37);
+    }
+
     h1,h2,h3{
         font-weight: bold;
     }
-    #dataDriven{
-      margin-top: 40px;
-      box-shadow: 1px 1px 10px #2057c4;
+    .analysis-list{
+        padding: 20px;
+        border: 5px solid #033b77;
+        width: 400px;
     }
-    #dataDriven tr:nth-child(odd){
-        background-color: #B7DAFF;
+    .data-analysis{
+        margin-bottom: 80px;
+        margin-top: 40px;
     }
-    #dataDriven tr:nth-child(even){
-        background-color: #DADADA;
+    .data-analysis img{
+        height: 250px;
+        width: 450px;
+        margin: auto 0;
+        position: relative;
+        box-shadow: 1px 1px 10px 2px #5c5e61;
     }
-    #dataDriven td{
-      padding: 30px 50px;
-      text-align: justify;
-      font-size: 25px;
-      border: 2px solid #2057c4;
+    .analysis-list h4{
+        position: absolute;
+        padding: 10px 15px;
+        width: 200px;
+        text-align: center;
+        transform: translate(80px, -50px);
+        z-index: 4;
+        border-radius: 10px;
+        background-color: #2057c4;
+        border: 5px solid #033b77;
+        color: white;
     }
-    #dataDriven tr td:nth-child(odd){
-      font-weight: bolder;
-      font-size: 30px;
+    .analysis-list ul{
+        list-style-type: none;
+        padding: 15px;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+    .analysis-list ul li{
+        padding: 10px;
+    }
+    .analysis-list ul li::before{
+        content: '\2713';
+        font-weight: bolder !important;
+        color: #2057c4;
+        font-size: 25px;
+        margin-right: 10px;
+        height: 100%;
     }
     .capsule-head{
       text-align: center;
@@ -54,40 +88,32 @@
       margin-top: 50px !important;
       background-image: linear-gradient(to top, #033b77, #2057c4,#2057c4);
     }
-    #gameChange{
+    .legal-analytics{
       margin-top: 70px;
-      box-shadow: 1px 1px 10px #033b77;
+      height: 300px;
     }
-    #gameChange img{
-      width: 20%;
+    .legal-analytics img{
+      width: 350px;
+      height: 240px;
+      transform: translateY(30px);
+      position: absolute;
+      border: 10px solid #2057c4;
     }
-    #gameChangeContent{
-      padding: 50px;
+    .legalAnalyticsContent{
       background-color: #2057c4;
       color: white;
       font-size: 20px;
+      width: 100%;
+      margin-left: 175px;
+      padding: 50px 100px 50px 250px;
     }
-    #gameChangeContent h3{
+    .legalAnalyticsContent p{
+        font-size: 25px !important;
+    }
+    .legalAnalyticsContent h3{
       color: white;
       margin-bottom: 40px;
       font-size: 30px;
-    }
-    .round-head{
-      width: 150px;
-      background-color: #2057c4;
-      color: White;
-      height: 150px;
-      float: left;
-      border-radius: 75px;
-      text-align: center;
-      font-size: 20px;
-      box-shadow: 1px 1px 10px #033b77;
-    }
-    .round-text{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 150px;
     }
   </style>
 
@@ -123,59 +149,82 @@
   </nav>
 
   <div class="container terms pt-5" id="content">
-    <h1>Vision</h1><br>
-    <h3 class="mt-3">Why Data-driven Legal Research?</h5>
-    <p>Over the past few years, Big data Analytics has been successfully implemented and used across various sectors, industries like finance, healthcare, supply-chain, etc. Big Data analytics involves the use of analytics techniques like machine learning, data mining, natural language processing, and statistics. The data is extracted, prepared and blended to provide analysis for the businesses. Large enterprises and multinational organizations use these techniques widely these days in different ways. Big Data analytics tools and techniques are rising in demand due to the use of Big Data in businesses. Organizations can find new opportunities and gain new insights to run their business efficiently. These tools help in providing meaningful information for making better business decisions. The companies can improve their strategies by keeping in mind the customer focus. Big data analytics efficiently helps operations to become more effective. This helps in improving the profits of the company.</p>
-    <p>According to a recent report from McKinney & Co., more than 40% of the businesses have implemented the use of Analytics and Artificial Intelligence in some of the other ways across the globe. With the growing Big Data in the legal sector, analytics can not just help professionals formulate better strategies but also minimize the efforts that are put in legal research. Here are a few ways in which litigation analytics can help lawyers and professionals in gaining trends and insights and satisfying their clients’ expectations.</p>
-    <div class="my-5 clearfix">
-      <div class="round-head mr-5"><div class="round-text">STRATEGY</div></div>
-      <div class="">
-        <p>Lawyers count on their past experiences to understand what will happen in the case, litigation analytics increases the chances by analysing events and patterns in the past with an increased magnitude of similar outcomes. The volumes of data provided by trained AI can help you understand how judges tend to rule on certain motions, opposing counsel’s record before a certain judge, a party’s tendency to settle, successful arguments, fact patterns, and other crucial information. Analytics can help legal professionals get a competitive edge by uncovering these patterns enabling data-driven decision making.</p>
-      </div>  
+    <h1>Researcher</h1><br>
+    <h4 class="capsule-head mb-4">Power your legal research with game changing features</h4><br>
+    <div class="mx-auto d-flex mb-5 tool">
+        <img src="./assets/images/researcher/contextSearch.png">
+        <div class="pl-lg-5">
+            <h4>AI- Powered Context Search</h4>
+            <p>A state-of-the-art context-based search engine that seeks to improve search accuracy by understanding searcher’s intent and the contextual meaning of terms as they appear in the searchable dataspace.</p>
+        </div>
     </div>
-    <div class="my-5 clearfix">
-      <div class="rect"></div>
-      <div class="round-head mr-5"><div class="round-text">PREDICTION</div></div>
-      <div class="">
-        <p>AI systems can develop the capability of finding the likelihood of occurrence of an outcome by identifying patterns. Professionals can easily get an insight into the possible outcome of the case considering a fact pattern and judge’s opinions into account which offers new perspectives to the legal professionals. It can show connections between cases and can generate a statistical analysis for predictive modeling and identify relations between game-changing decisions that could make or break the case.</p>
-      </div>  
+    <div class="mx-auto d-flex mb-5 tool">
+        <div>
+            <h4>AI- Powered LexTracts</h4>
+            <p>Get the most relevant contents out of a judgment. Use Lextracts to quickly get a context of a judgment. Lextract uses AI to identify key information and language from a Judgment and reduces reading time significantly.</p>
+        </div>
     </div>
-    <div class="my-5 clearfix">
-      <div class="round-head mr-5"><div class="round-text">MAKE CLIENTS HAPPIER</div></div>
-      <div class="">
-        <p>Professionals can predict likely outcomes of a case preparing clients with various information such as expected costs incurred by the courts, no. of hearings expected and the expected time for the judgment to be disbursed. This information would make clients more connected and help lawyers in establishing a more trustworthy relation.</p>
-      </div>  
-    </div><br>
+    <div class="mx-auto d-flex my-5 tool">
+        <img src="./assets/images/researcher/contextSearch-2.png">
+        <div class="pl-lg-5">
+            <h4>AI- Powered Context Search</h4>
+            <p>Get a competitive edge by using analytics to uncover trends and patterns across millions of judgments. Predict the behaviour of the court, judges, lawyers and parties with the help of visualisations and data analytics techniques and build strategies by taking data-driven decisions to have an edge over your opposite counsel at the court proceedings</p>
+        </div>
+    </div><br><br>
 
- <h3 class="capsule-head">Data Driven Decision making</h3>
- <table class="table table-striped" id="dataDriven">
-  <tbody>
-    <tr>
-      <td>Outcomes</td>
-      <td>Analyse trends on motions that courts arrive at in various types of cases.</td>
-    </tr>
-    <tr>
-      <td>Language</td>
-      <td>Get insights on which precedents have more value and likely to be accepted while arguing.</td>
-    </tr>
-    <tr>
-      <td>Time</td>
-      <td>Know the time it will take for a decision and get information about time taken by courts and judges</td>
-    </tr>
-    <tr>
-      <td>Trends</td>
-      <td>Estimate litigation costs and price the billable hours data. Get insights on best performing lawyers </td>
-    </tr>
-  </tbody>
-</table>
+    <h4 class="capsule-head">Turn yourself into a Data Analyst with Legalmind Analytics</h4>
+    <div id="legalAnalytics" class="">
+        <div class="legal-analytics d-flex">
+            <img src="./assets/images/researcher/citation.png">
+            <div class="legalAnalyticsContent">
+                <h3>CITATIONS</h3>
+                <p>Establish relationships between cases faster. Analyse which cases are more important and highly argumentative in nature</p>
+            </div>    
+        </div>
+        <div class="legal-analytics d-flex">
+            <img src="./assets/images/researcher/verdict.png">
+            <div class="legalAnalyticsContent">
+                <h3>VERDICT TIMELINE</h3>
+                <p>Identify the frequencies of occurrences of a query and analyse the time range of the cases.</p>
+            </div>    
+        </div>
+        <div class="legal-analytics d-flex">
+            <img src="./assets/images/researcher/decision.png">
+            <div class="legalAnalyticsContent">
+                <h3>DECISION</h3>
+                <p>Identify the key motions and likelihood of a type of verdict based on the historical trends on all the courts.</p>
+            </div>    
+        </div>
+    </div><br><br>
 
-<div id="gameChange" class="d-flex">
-  <img src="./assets/images/vision images/gameChange.png">
-  <div id="gameChangeContent">
-    <h3>Build game changing strategies and win more cases. Identify predictable in the unpredictable with LegalMind</h3>
-    <p>LegalMind Legal Analytics allows you to uncover insights about judges, parties, and opposing counsel unavailable in traditional research tools. This enables you to get additional insight into your cases quickly and efficiently. It adds significant value for your clients.</p>
-  </div>
-</div>
+    <h4 class="capsule-head mb-4">Turn yourself into a Data Analyst with Legalmind analytics</h4><br>
+    <div class="d-flex data-analysis justify-content-around">
+        <img src="./assets/images/researcher/partyAnalytics.png">
+        <div class="analysis-list">
+            <h4>Party Analytics</h4>
+            <div>
+                <ul>
+                    <li>Case timeline of a party</li>
+                    <li>Practice area wise analysis</li>
+                    <li>Frequent representation by which lawyers</li> 
+                    <li>Identify trends on settlements</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex data-analysis justify-content-around">
+        <img src="./assets/images/researcher/judgeAnalytics.png">
+        <div class="analysis-list">
+            <h4>Judge Analytics</h4>
+            <div>
+                <ul>
+                    <li>Analyse which judges are being cited most by a Judge</li>
+                    <li>Analyse the precedent value and most cited cases by a Judge</li>
+                    <li>Get all the recent and most cited opinions of Judges</li> 
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </div>
 
