@@ -108,7 +108,12 @@ a:hover {
   position: absolute;
   padding: 7px 0;
   z-index: 999;
-  margin-top: 10px;
+  box-shadow: 1px 1px 5px 1px #194294 inset;
+  display: none;
+}
+
+#prod:hover .pri-menu{
+  display: block;
 }
 
 #navbarNav .pri-menu li{
@@ -117,7 +122,7 @@ a:hover {
 }
 
 #prodMenu li:hover{
-  background-color: blue;
+  background-color: #194eb8;
 }
 
 #navbarNav .sec-menu{
@@ -128,8 +133,9 @@ a:hover {
   position: absolute;
   padding: 7px 0;
   z-index: 999;
-  margin-left: 190px;
+  margin-left: 175px;
   margin-top: -36px;
+  box-shadow: 1px 1px 5px 1px #194294 inset;
 }
 
 #navbarNav .sec-menu li{
@@ -657,6 +663,9 @@ a:hover {
     right: -5% !important;
   }
 
+  #navbarNav .pri-menu{
+    position: relative;
+  }
 
 }
 
