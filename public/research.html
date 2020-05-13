@@ -20,6 +20,9 @@
     #content p{
       font-size: 20px;
     }
+    .tool{
+      display: flex;
+    }
     .tool img{
         width: 30%;
         border: 20px solid black;
@@ -35,10 +38,13 @@
         padding: 20px;
         border: 5px solid #033b77;
         width: 400px;
+        display: flex;
     }
     .data-analysis{
         margin-bottom: 80px;
         margin-top: 40px;
+        display: flex;
+
     }
     .data-analysis img{
         height: 250px;
@@ -91,6 +97,7 @@
     .legal-analytics{
       margin-top: 70px;
       height: 300px;
+      display: flex;
     }
     .legal-analytics img{
       width: 350px;
@@ -115,6 +122,59 @@
       margin-bottom: 40px;
       font-size: 30px;
     }
+    @media only screen and (max-width: 450px) {
+      .capsule-head{
+        padding: 10px;
+        width: 100%;
+        font-size: 20px;
+      }
+      .tool{
+        display: block;
+        margin: 50px 0;
+      }
+      .tool img{
+        width: 100%;
+        border: 15px solid black;
+        border-radius: 20px;
+        padding: 1px;      
+        box-shadow: 1px 1px 10px rgb(37, 37, 37);
+      }
+      .analysis-list{
+        width: 100%;
+        display: block;
+    }
+    .data-analysis{
+        margin-bottom: 80px;
+        margin-top: 40px;
+        display: block;
+    }
+    .data-analysis img{
+        height: 300px;
+        width: 100%;
+        margin: 50px 0;
+    }
+    .analysis-list h4{
+        transform: translate(70px, -50px);
+    }
+    .analysis-list ul li{
+        padding: 10px;
+    }
+    .legal-analytics{
+      margin-top: 70px;
+      height: 500px;
+    }
+    .legal-analytics img{
+      width: calc(100% - 30px);
+      height: 250px;
+      transform: translateY(0);
+    }
+    .legalAnalyticsContent{
+      margin-left: 0;
+      padding: 260px 10px 10px 10px;
+    }
+
+
+  }
   </style>
 
 </head>
@@ -132,7 +192,7 @@
               style="line-height: 60px; font-size: 2em;color : white">LegalMind</span></div>
         </a>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -150,21 +210,21 @@
 
   <div class="container terms pt-5" id="content">
     <h1>Researcher</h1><br>
-    <h4 class="capsule-head mb-4">Power your legal research with game changing features</h4><br>
-    <div class="mx-auto d-flex mb-5 tool">
+    <h4 class="capsule-head mb-lg-4">Power your legal research with game changing features</h4><br>
+    <div class="mx-auto mb-5 tool" id='tool1'>
         <img src="./assets/images/researcher/contextSearch.png">
         <div class="pl-lg-5">
             <h4>AI- Powered Context Search</h4>
             <p>A state-of-the-art context-based search engine that seeks to improve search accuracy by understanding searcher’s intent and the contextual meaning of terms as they appear in the searchable dataspace.</p>
         </div>
     </div>
-    <div class="mx-auto d-flex mb-5 tool">
+    <div class="mx-auto mb-5 tool" id='tool2'>
         <div>
             <h4>AI- Powered LexTracts</h4>
             <p>Get the most relevant contents out of a judgment. Use Lextracts to quickly get a context of a judgment. Lextract uses AI to identify key information and language from a Judgment and reduces reading time significantly.</p>
         </div>
     </div>
-    <div class="mx-auto d-flex my-5 tool">
+    <div class="mx-auto my-5 tool" id='tool3'>
         <img src="./assets/images/researcher/contextSearch-2.png">
         <div class="pl-lg-5">
             <h4>AI- Powered Context Search</h4>
@@ -174,21 +234,21 @@
 
     <h4 class="capsule-head">Turn yourself into a Data Analyst with Legalmind Analytics</h4>
     <div id="legalAnalytics" class="">
-        <div class="legal-analytics d-flex">
+        <div class="legal-analytics">
             <img src="./assets/images/researcher/citation.png">
             <div class="legalAnalyticsContent">
                 <h3>CITATIONS</h3>
                 <p>Establish relationships between cases faster. Analyse which cases are more important and highly argumentative in nature</p>
             </div>    
         </div>
-        <div class="legal-analytics d-flex">
+        <div class="legal-analytics">
             <img src="./assets/images/researcher/verdict.png">
             <div class="legalAnalyticsContent">
                 <h3>VERDICT TIMELINE</h3>
                 <p>Identify the frequencies of occurrences of a query and analyse the time range of the cases.</p>
             </div>    
         </div>
-        <div class="legal-analytics d-flex">
+        <div class="legal-analytics">
             <img src="./assets/images/researcher/decision.png">
             <div class="legalAnalyticsContent">
                 <h3>DECISION</h3>
@@ -198,7 +258,7 @@
     </div><br><br>
 
     <h4 class="capsule-head mb-4">Turn yourself into a Data Analyst with Legalmind analytics</h4><br>
-    <div class="d-flex data-analysis justify-content-around">
+    <div class="data-analysis justify-content-around" id="partyAnalytics">
         <img src="./assets/images/researcher/partyAnalytics.png">
         <div class="analysis-list">
             <h4>Party Analytics</h4>
@@ -212,7 +272,7 @@
             </div>
         </div>
     </div>
-    <div class="d-flex data-analysis justify-content-around">
+    <div class="data-analysis justify-content-around" id="judgeAnalytics">
         <img src="./assets/images/researcher/judgeAnalytics.png">
         <div class="analysis-list">
             <h4>Judge Analytics</h4>
@@ -301,5 +361,13 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 </body>
+<script>
+  if($(window).width() < 450) {
+    $("#tool1 img").insertAfter("#tool1 div");
+    $("#tool3 img").insertAfter("#tool3 div");
+    $("#partyAnalytics img").insertAfter("#partyAnalytics .analysis-list div");
+    $("#judgeAnalytics img").insertAfter("#judgeAnalytics .analysis-list div");
+}
+</script>
 
 </html>
