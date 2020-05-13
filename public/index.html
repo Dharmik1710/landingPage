@@ -70,7 +70,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-3"><a href="vision.html" class="nav-link">Vision</a></li>
             <li class="nav-item mx-3" id="prod"><a href="#" class="nav-link">Products</a>
-              <ul class="pri-menu d-none" id="prodMenu">
+              <ul class="pri-menu" id="prodMenu">
                 <a href="research.html"><li class="nav-item">Researcher</li></a>
                 <a href="https://summarizer.legalmind.tech/"><li class="nav-item">Ai Summarizer</li></a>
                 <a href="word-addin.html"><li class="nav-item">Word Addins</li></a>
@@ -589,6 +589,7 @@
     }
 
     if($(window).width() <= 768) {
+        $('#prodMenu').addClass('d-none');
         $('#featuresHead .mobFeaturesHead').html('<br>');
         $('#prod').click(function(){
           $('#prodMenu').toggleClass('d-none');
