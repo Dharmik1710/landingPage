@@ -20,106 +20,40 @@
     #content p{
       font-size: 20px;
     }
-    .tool img{
-        width: 30%;
-        border: 20px solid black;
-        border-radius: 20px;
-        padding: 1px;      
-        box-shadow: 1px 1px 10px rgb(37, 37, 37);
-    }
-
     h1,h2,h3{
         font-weight: bold;
     }
-    .reason img{
-        height: 200px;
-        border: 10px solid #2057c4;
-        box-shadow: 1px 1px 5px #033b77;
-        border-radius: 100px;
-        padding: 25px;
-        margin: 20px 0;
-    }
-    #problems ul{
-        list-style-type: none;
-    }
-    #rescue ul{
-        list-style-type: none;
-    }
-    #problems ul li{
-        padding: 5px 0;
-    }
-    #rescue ul li{
-        padding: 5px 0;
-    }
-    #problems ul li::before{
-        content: '\003F';
-        font-weight: bolder !important;
-        color: red;
-        font-size: 25px;
-        margin-right: 10px;
-    }
-    #rescue ul li::before{
-        content: '\2713';
-        font-weight: bolder !important;
-        color: green;
-        font-size: 25px;
-        margin-right: 10px;
-    }
-    #oneStop img{
-        width: 20%;
-        box-shadow: 1px 2px 25px #033b77;
-    }
     .oneStop-card{
         align-items: center;
-        margin: 30px 0 30px 100px;
-        height: 170px;
+        margin: 0;
+        height: 250px;
+        display: flex;
     }
     .oneStop-text p{
         padding: 30px;
-        font-size: 20px;
+        font-size: 25px !important;
         margin-bottom: 0;
         color: white;
     }
     .oneStop-num{
-      width: 170px;
-      border: 30px solid #2057c4;
-      height: 170px;
-      border-radius: 85px;
-      line-height: 110px;
-      align-items: center;
-      text-align: center;
+      width: 250px;
+      border: 15px solid #2057c4;
+      height: 250px;
+      border-radius: 125px;
       position: absolute;
       background-color: white;
       color: black;
-      font-size: 50px;
       font-weight: bolder;
+    }
+    .oneStop-num img{
+      margin: 50px;
     }
     .oneStop-text{
-      height: 90%;
-      width: calc(100% - 85px);
+      height: 100%;
+      width: calc(100% - 100px);
       background-color: #2057c4;
-      margin-left: 85px;
-      padding: 0 40px 0 80px;
-    }
-    #dataDriven{
-      margin-top: 40px;
-      box-shadow: 1px 1px 10px #2057c4;
-    }
-    #dataDriven tr:nth-child(odd){
-        background-color: #B7DAFF;
-    }
-    #dataDriven tr:nth-child(even){
-        background-color: #DADADA;
-    }
-    #dataDriven td{
-      padding: 30px 50px;
-      text-align: justify;
-      font-size: 25px;
-      border: 2px solid #2057c4;
-    }
-    #dataDriven tr td:nth-child(odd){
-      font-weight: bolder;
-      font-size: 30px;
+      margin-left: 125px;
+      padding: 40px 50px 40px 135px;
     }
     .capsule-head{
       text-align: center;
@@ -132,24 +66,6 @@
       margin-top: 50px !important;
       background-image: linear-gradient(to top, #033b77, #2057c4,#2057c4);
     }
-    #gameChange{
-      margin-top: 70px;
-      box-shadow: 1px 1px 10px #033b77;
-    }
-    #gameChange img{
-      width: 20%;
-    }
-    #gameChangeContent{
-      padding: 50px;
-      background-color: #2057c4;
-      color: white;
-      font-size: 20px;
-    }
-    #gameChangeContent h3{
-      color: white;
-      margin-bottom: 40px;
-      font-size: 30px;
-    }
     .round-head{
       width: 150px;
       background-color: #2057c4;
@@ -161,11 +77,143 @@
       font-size: 20px;
       box-shadow: 1px 1px 10px #033b77;
     }
-    .round-text{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 150px;
+    .deeplex-list{
+        padding: 10px;
+        width: 550px;
+    }
+    #deeplex{
+        margin-bottom: 100px;
+        margin-top: 100px;
+        display: flex;
+    }
+    #deeplex img{
+        width: 350px;
+        margin: auto 0;
+        position: relative;
+        box-shadow: 1px 1px 10px 2px #5c5e61;
+    }
+    .deeplex-list ul{
+        list-style-type: none;
+        padding: 15px;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .deeplex-list ul li{
+        padding: 15px;
+        font-size: 25px;
+    }
+    .deeplex-list ul li::before{
+        content: '\2713';
+        font-weight: bolder !important;
+        color: #2057c4;
+        font-size: 40px;
+        margin-right: 10px;
+        height: 100%;
+    }
+    #deeplexText, #deepMatchText{
+      margin-top: 70px !important;
+    }
+    #deeplexText h3 {
+      position: absolute;
+      transform: translate(-50%, -25px);
+      font-size: 30px;
+      left: 50%;
+      padding: 10px 20px;
+      background-color: #2057c4;
+      color: white;
+      border-radius: 10px;
+    }
+    #deepMatchText h3{
+      position: absolute;
+      transform: translate(-50%, -70px);
+      font-size: 30px;
+      left: 50%;
+      padding: 10px 20px;
+      background-color: #2057c4;
+      color: white;
+      border-radius: 10px;  
+    }
+    #deeplexText p, #deepMatchText{
+      padding: 35px;
+      border: 5px solid #2057c4;
+      font-size: 25px !important;
+    }
+    #deepMatchText p{
+      font-size: 25px !important;
+    }
+    @media only screen and (max-width: 1024px) {
+      .capsule-head{
+        padding: 10px;
+        width: 100%;
+        font-size: 20px;
+        margin-top: 70px !important;
+      }
+      #deeplexText p, #deepMatchText{
+        padding: 35px 15px;
+        border: 5px solid #2057c4;
+        font-size: 20px !important;
+      }
+      #deepMatchText p{
+        font-size: 20px !important;
+      }
+      #deepMatchText h3{
+        transform: translate(-50%, -60px);
+      }
+      .oneStop-card{
+          align-items: center;
+          margin: 0;
+          height: 100%;
+          display: block;
+      }
+      .oneStop-text p{
+          padding: 30px;
+          font-size: 25px !important;
+          margin-bottom: 0;
+          color: white;
+      }
+      .oneStop-num{
+        width: 100%;
+        border: 5px solid #2057c4;
+        height: 100%;
+        border-radius: 0;
+        position: relative;
+      }
+      .oneStop-num img{
+        margin: 40px 125px;
+      }
+
+      .oneStop-text{
+        height: 100%;
+        display: block;
+        width: 100%;
+        background-color: #2057c4;
+        margin-left: 0px;
+        padding: 20px 5px;
+      }
+      .deeplex-list{
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      #deeplex{
+          display: block;
+      }
+      #deeplex img{
+          width: 100%;
+          position: relative;
+          box-shadow: 1px 1px 10px 2px #5c5e61;
+      }
+      .deeplex-list ul{
+          list-style-type: none;
+          padding: 0px;
+          margin-top: 1rem;
+          margin-bottom: 0;
+      }
+      .deeplex-list ul li{
+          padding: 15px 10px;
+          font-size: 25px;
+      }
+      
     }
   </style>
 
@@ -184,7 +232,7 @@
               style="line-height: 60px; font-size: 2em;color : white">LegalMind</span></div>
         </a>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -201,140 +249,50 @@
   </nav>
 
   <div class="container terms pt-5" id="content">
-    <h1>Word Addins</h1><br>
-    <h3>Build game changing strategies and win more cases.
-        Identify predictable in the unpredictable with
-        LegalMind</h3>
-    <h5>LegalMind Legal Analytics allows you to uncover insights about judges, parties, and opposing counsel unavailable in traditional research tools. This enables you to get additional insight into your cases quickly and efficiently. It adds significant value for your clients.</h5><br><br>
-    <h3 class="capsule-head my-4">Get access to intelligent and powerful tools</h3><br>
-    <div class="mx-auto d-flex mb-5 py-5 tool">
-        <img src="./assets/images/vision images/dashboard.png">
-        <div class="pl-lg-5">
-            <h4>Dashboard</h4>
-            <p>Get data analytics and trends on various practice area independently and how are different jurisdictions treating cases to these practice areas. Customise the insights according to your needs and get real time updates on cases across courts.</p>
-        </div>
+    <h1>Word Add-in</h1>
+    <h3 class="capsule-head">Featured tailored according to your needs</h3>
+    <div class="" id="deeplexText">
+      <h3 class="text-center">Deeplex</h3>
+      <p>Witness your multi page judgement transfor into a crisp summary without missing out on any minute details. The summarizer runs on NLP engine that understands the case flow and outputs the most relevant arguments, facts and issues that leads to declaring the verdict of the case. Data-driven decisions to have edge over your opposite councel at the court preceedings.</p>
     </div>
-    <div class="mx-auto d-flex mb-5 pb-5 tool">
-        <div class="pr-lg-5">
-            <h4>Precedent Analytics</h4>
-            <p>Analyse how valuable a precedent is by understanding how frequently it is being cited by judges and courts. Filter your analysis based on provisions to get better sense of a precedent and building case winning arguments</p>
-        </div>
-        <img src="./assets/images/vision images/analysis.png">
-    </div>
-    <div class="mx-auto d-flex my-5 pb-5 tool">
-        <img src="./assets/images/vision images/lextimates.png">
-        <div class="pl-lg-5">
-            <h4>Extimate historical trends with lextimates</h4>
-            <p>Get data analytics and trends on various practice area independently and how are different jurisdictions treating cases to these practice areas. Customise the insights according to your needs and get real time updates on cases across courts.</p>
-        </div>
-    </div><br><br>
 
-    <!-- <h3 class="capsule-head">Gain advantage over others</h3><br>
-    <div class="row justify-content-around text-center mb-lg-4">
-        <div class="reason">
-          <img src="./assets/images/vision images/time.jpeg">
-          <h4>Time and Cost Saving</h4>  
-        </div>
-        <div class="reason">
-            <img src="./assets/images/vision images/competitive.jpeg">
-            <h4>Gain a Competitive Edge</h4>  
-        </div>
-        <div class="reason">
-            <img src="./assets/images/vision images/strategies.jpeg">
-            <h4>Build better Strategies</h4>  
-        </div>
-        <div class="reason">
-            <img src="./assets/images/vision images/client.jpeg">
-            <h4>Better Client Relations</h4>  
-        </div>
-    </div><br><br>
-    <h3 class="capsule-head mb-5">One Stop Solution</h3>
+
+    <div class="" id="deepMatchText">
+      <h3 class="text-center">DeepMatch</h3>
+      <p>DeepMatch is an advanced filter to optimize your research query and get relevant results</p>
+      <ul>
+        <li>Identify Case laws with relevant issues</li>
+        <li>Check for relevant languages that court cite</li>
+        <li>Identify cases with specific dispositions</li>
+      </ul>
+    </div>
+
+    <h3 class="capsule-head mb-4">Integrate LegalMind with Microsoft word Add-in</h3><br>
     <div class="d-flex" id="oneStop">
-        <img src="./assets/images/vision images/oneStop.png">
-        <div id="oneStopContent">
-            <div class="oneStop-card d-flex">
-              <div class="oneStop-num">1</div>
-              <div class="oneStop-text">
-                  <p>Real time updates on latest circulars, notifications, regulations or information across various departments to keep you up to date with alerts.</p>
-              </div>
+      <div id="oneStopContent">
+          <div class="oneStop-card">
+            <div class="oneStop-num"><img src="./assets/images/word addins/word.png"></div>
+            <div class="oneStop-text">
+                <h3 class="ml-4 text-white font-weight-bold">Power MS-Word with Deeplex</h3>
+                <p>Get real time and instant case laws and provisions similar to a pleading/ notice. Draft which you are creating in Word. Automate and present better arguments</p>
             </div>
-            <div class="oneStop-card d-flex">
-              <div class="oneStop-num">2</div>
-              <div class="oneStop-text">
-                  <p>Get access to all case laws from a particular area of law for an in depth and better analysis. Also get access to statutes and acts and Realtime amendments alerts.</p>                
-              </div>
-            </div>
-            <div class="oneStop-card d-flex">
-              <div class="oneStop-num">3</div>
-              <div class="oneStop-text">
-                  <p>Save analysis and generate reports to share with others across email, web etc. Also set alerts on any search query to get notifications on any new information on that.</p>
-              </div>
           </div>
-        </div>
-    </div><br><br><br>
-    <h3>Case Study- Using LegalMind’s Analytics on IBC cases</h3><br>
-    <h5>Litigation can be a mundane and time taking task, exhausting and frustrating in any area of practice. In an Insolvency and Bankruptcy case keeping clients happier and answering all their queries is next to impossible. With LegalMind Data Driven tools Legal Professionals can tackle these problems.</h5><br>
-    <h3>Here is how LegalMind helps</h3><br>
-    <div class="d-flex justify-content-between">
-        <div id="problems" class="d-flex">
-            <div>
-                <h4>What were the problems ?</h4>
-                <ul>
-                    <li>Which cases to cite?</li>
-                    <li>While local Counsel to engage?</li>
-                    <li>What might the court rule for my case?</li> 
-                    <li>How long will my case take?</li>
-                    <li>What can be the litigation cost?</li>
-                </ul>
-            </div>
-            <img src="./assets/images/vision images/problem.jpeg" class="h-80">
-        </div>
-        <div id="rescue" class="d-flex">
-            <div>
-                <h4>LegalMind to the rescue</h4>
-                <ul>
-                    <li>Analysis on most cited similar case</li>
-                    <li>Analysis of success rates of attorneys</li>
-                    <li>Segmentation of various ruling tendencies.</li> 
-                    <li>Tracking the entire timeline of cases.</li>
-                    <li>Analysis of provision wise total hearings</li>
-                </ul>
-            </div>
-            <img src="./assets/images/vision images/rescue.jpeg">
+      </div>
+    </div>
+
+    <div class="data-analysis justify-content-around" id="deeplex">
+        <img src="./assets/images/word addins/deeplex.png">
+        <div class="deeplex-list">
+          <h3 class="text-center">Key points</h3>
+          <ul>
+              <li>Search complete database directly from Word</li>
+              <li>Search similar cases on a part or the complete document using DeepLex</li>
+              <li>Apply multiple filters to get relevant results and optimize your drafting,</li> 
+              <li>Get your Hands- On LegalMind’s smart and intelligent tools</li>
+          </ul>
         </div>
     </div>
-    <h1 class="my-5 text-center">Stay a Step ahead with your competitors</h1>
 
-
- <h3 class="capsule-head">Data Driven Decision making</h3>
- <table class="table table-striped" id="dataDriven">
-  <tbody>
-    <tr>
-      <td>Outcomes</td>
-      <td>Analyse trends on motions that courts arrive at in various types of cases.</td>
-    </tr>
-    <tr>
-      <td>Language</td>
-      <td>Get insights on which precedents have more value and likely to be accepted while arguing.</td>
-    </tr>
-    <tr>
-      <td>Time</td>
-      <td>Know the time it will take for a decision and get information about time taken by courts and judges</td>
-    </tr>
-    <tr>
-      <td>Trends</td>
-      <td>Estimate litigation costs and price the billable hours data. Get insights on best performing lawyers </td>
-    </tr>
-  </tbody>
-</table>
-
-<div id="gameChange" class="d-flex">
-  <img src="./assets/images/vision images/gameChange.png">
-  <div id="gameChangeContent">
-    <h3>Build game changing strategies and win more cases. Identify predictable in the unpredictable with LegalMind</h3>
-    <p>LegalMind Legal Analytics allows you to uncover insights about judges, parties, and opposing counsel unavailable in traditional research tools. This enables you to get additional insight into your cases quickly and efficiently. It adds significant value for your clients.</p>
-  </div>
-</div> -->
 
 </div>
 
@@ -411,5 +369,9 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 </body>
-
+  <script>
+    if($(window).width() < 1024) {
+      $("#deeplex img").insertAfter("#deeplex .deeplex-list");
+    }
+  </script>
 </html>
