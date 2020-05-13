@@ -69,12 +69,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-3"><a href="vision.html" class="nav-link">Vision</a></li>
-            <li class="nav-item mx-3"><a href="#" class="nav-link" id="prod">Products</a>
+            <li class="nav-item mx-3" id="prod"><a href="#" class="nav-link">Products</a>
               <ul class="pri-menu" id="prodMenu">
                 <a href="research.html"><li class="nav-item">Researcher</li></a>
-                <a href="#"><li class="nav-item">Ai Summarizer</li></a>
+                <a href="https://summarizer.legalmind.tech/"><li class="nav-item">Ai Summarizer</li></a>
                 <a href="word-addin.html"><li class="nav-item">Word Addins</li></a>
-                <a href="legal-intel.html"><li class="nav-item" id="legalInt">Legal Intelligence
+                <a href="legal-intel.html"><li class="nav-item" id="legalInt">Legal Intelligence</li></a>
                   <!-- <span class="float-right"><i class="fa fa-angle-right fa-fw" style="line-height: 1.3rem;"></i></span>
                   <ul class="sec-menu" id="liMenu">
                     <a href="#"><li class="nav-item">Insolvency</li></a>
@@ -590,6 +590,9 @@
 
     if($(window).width() <= 768) {
         $('#featuresHead .mobFeaturesHead').html('<br>');
+        $('#prod').click(function(){
+          $('#prodMenu').slideToggle(500);
+        });
     }
 
     var typed1 = new Typed('#typedElem1', {
@@ -626,46 +629,15 @@
     opt5.strings = ['Analyser']
     var typed5 = new Typed('#typedElem5', opt5);
 
-    $(document).ready(function(){
-      $('#prod').hover(function(){
-        $('#navbarNav .pri-menu').show();
-      //   $('.pri-menu #legalInt').hover(function(){
-      //     $('.pri-menu .sec-menu').show();
-      //   });
-        $('#legalInt').mouseover(function(){
-          $('#liMenu').show();
-        });
-        $('#prodMenu').mouseover(function(){
-          $('#prodMenu').show();
-          $('#prodMenu').mouseout(function(){
-            $('#prodMenu').hide();
-          });
-        });
-
-        // $('#legalIn').hover(function(){
-        //   $('#prodMenu').hide();
-        // });
-      
-      });
-
-      // $('#').mouseout(function(){
-      //   $('#prod').hide();
-      // });
-
-      $('#legalInt').mouseout(function(){
-        $('#liMenu').mouseover(function(){
-          $('#liMenu').show();
-        })
-      });
-
-      $('#legalInt').mouseout(function(){
-          $('#liMenu').hide();
-      });
-
-      $('#navbarNav .pri-menu').hide();
-      $('.pri-menu .sec-menu').hide();
-  
+    $('#prod').mouseover(function(){
+      $('#prodMenu').css('display', 'block');
     });
+    $('#prodMenu').mouseout(function(){
+      $('#prod').mouseout(function(){
+        $('#prodMenu').css('display', 'none');
+      });
+    });
+    
 
 </script>
 </body>

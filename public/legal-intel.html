@@ -20,6 +20,9 @@
     #content p{
       font-size: 20px;
     }
+    .tool{
+      display: flex;
+    }
     .tool img{
         width: 40%;
         border: 20px solid black;
@@ -38,6 +41,12 @@
         border-radius: 100px;
         padding: 25px;
         margin: 20px 0;
+    }
+    #probAndRes{
+      display: flex;
+    }
+    #problems, #rescue{
+      display: flex;
     }
     #problems ul{
         list-style-type: none;
@@ -112,6 +121,96 @@
       margin-top: 50px !important;
       background-image: linear-gradient(to top, #033b77, #2057c4,#2057c4);
     }
+    @media only screen and (max-width: 450px) {
+      .capsule-head{
+        padding: 10px;
+        width: 100%;
+        font-size: 20px;
+        margin-top: 60px;
+      }
+      .tool{
+        display: block;
+        margin: 60px 0 !important;
+      }
+      .tool img{
+        width: 100%;
+        border: 15px solid black;
+      }
+      #tool3{
+        margin-bottom: 100px !important;
+      }
+      #tool1{
+        margin-top: 40px !important;
+      }
+      #oneStop img{
+        width: 50%;
+        box-shadow: 1px 2px 25px #033b77;
+     }
+      .oneStop-card{
+          margin: 0 0 10px 5px;
+          height: 190px;
+      }
+      .oneStop-text p{
+          padding: 0;
+          margin-bottom: 0;
+          font-size: 15px !important;
+          text-align: left;
+      }
+      .oneStop-num{
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          background-color: white;
+          border: 2px solid #2057c4;
+          color: black;
+          font-size: 25px;
+          transform: translateY(-90px);
+      }
+      .oneStop-text{
+          height: 100%;
+          width: 100%;
+          margin-left: 0px !important;
+          padding: 15px 10px 5px 15px !important;
+          border-radius: 30px !important;
+      }
+      #probAndRes{
+        display: block;
+      }
+      #problems, #rescue{
+        display: block;
+        margin-bottom: 50px;
+      }
+      #problems img, #rescue img{
+        width: 50% !important;
+        margin: 0 25%;
+      }
+      #problems ul{
+          list-style-type: none;
+      }
+      #rescue ul{
+          list-style-type: none;
+      }
+      #problems ul li{
+          padding: 5px 0;
+      }
+      #rescue ul li{
+          padding: 5px 0;
+      }
+      #problems ul li::before{
+          content: '\003F';
+          font-weight: bolder !important;
+          color: red;
+          font-size: 25px;
+          margin-right: 10px;
+      }
+      #rescue ul li::before{
+          content: '\2713';
+          font-weight: bolder !important;
+          color: green;
+          font-size: 25px;
+          margin-right: 10px;
+      }
+  }
   </style>
 
 </head>
@@ -129,13 +228,13 @@
               style="line-height: 60px; font-size: 2em;color : white">LegalMind</span></div>
         </a>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="https://www.legalmind.tech/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#footer" class="nav-link">Contact Us</a></li>
           <li class="nav-item"><a href="https://summarizer.legalmind.tech/" class="btn btn-primary ml-lg-4"
               target="_blank">Go To AI-Summariser</a>
@@ -151,22 +250,22 @@
         Identify predictable in the unpredictable with
         LegalMind</h3>
     <h5>LegalMind Legal Analytics allows you to uncover insights about judges, parties, and opposing counsel unavailable in traditional research tools. This enables you to get additional insight into your cases quickly and efficiently. It adds significant value for your clients.</h5><br><br>
-    <h3 class="capsule-head my-4">Get access to intelligent and powerful tools</h3><br>
-    <div class="mx-auto d-flex mb-5 py-5 tool">
+    <h3 class="capsule-head my-lg-4">Get access to intelligent and powerful tools</h3><br>
+    <div class="mx-auto mb-lg-5 py-lg-3 tool" id="tool1">
         <img src="./assets/images/vision images/dashboard.png">
         <div class="pl-lg-5">
             <h4>Dashboard</h4>
             <p>Get data analytics and trends on various practice area independently and how are different jurisdictions treating cases to these practice areas. Customise the insights according to your needs and get real time updates on cases across courts.</p>
         </div>
     </div>
-    <div class="mx-auto d-flex mb-5 pb-5 tool">
+    <div class="mx-auto mb-lg-5 py-lg-3 tool" id="tool2">
         <div class="pr-lg-5">
             <h4>Precedent Analytics</h4>
             <p>Analyse how valuable a precedent is by understanding how frequently it is being cited by judges and courts. Filter your analysis based on provisions to get better sense of a precedent and building case winning arguments</p>
         </div>
         <img src="./assets/images/vision images/analysis.png">
     </div>
-    <div class="mx-auto d-flex my-5 pb-5 tool">
+    <div class="mx-auto my-lg-5 py-lg-3 tool" id="tool3">
         <img src="./assets/images/vision images/lextimates.png">
         <div class="pl-lg-5">
             <h4>Extimate historical trends with lextimates</h4>
@@ -222,8 +321,8 @@
     <h3>Case Study- Using LegalMind’s Analytics on IBC cases</h3>
     <h5>Litigation can be a mundane and time taking task, exhausting and frustrating in any area of practice. In an Insolvency and Bankruptcy case keeping clients happier and answering all their queries is next to impossible. With LegalMind Data Driven tools Legal Professionals can tackle these problems.</h5><br><br>
     <h3>Here is how LegalMind helps</h3><br>
-    <div class="d-flex justify-content-between">
-        <div id="problems" class="d-flex">
+    <div class="justify-content-between" id="probAndRes">
+        <div id="problems" class="">
             <div>
                 <h4>What were the problems ?</h4>
                 <ul>
@@ -234,9 +333,9 @@
                     <li>What can be the litigation cost?</li>
                 </ul>
             </div>
-            <img src="./assets/images/vision images/problem.jpeg" class="h-80">
+            <img src="./assets/images/vision images/problem.jpeg">
         </div>
-        <div id="rescue" class="d-flex">
+        <div id="rescue" class="">
             <div>
                 <h4>LegalMind to the rescue</h4>
                 <ul>
@@ -327,5 +426,11 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 </body>
+<script>
+      if($(window).width() < 450) {
+        $("#tool1 img").insertAfter("#tool1 div");
+        $("#tool3 img").insertAfter("#tool3 div");
+    }
+</script>
 
 </html>

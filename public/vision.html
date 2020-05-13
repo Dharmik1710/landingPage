@@ -57,9 +57,11 @@
     #gameChange{
       margin-top: 70px;
       box-shadow: 1px 1px 10px #033b77;
+      display: flex;
     }
     #gameChange img{
       width: 20%;
+      border: 5px solid #2057c4;
     }
     #gameChangeContent{
       padding: 50px;
@@ -89,6 +91,52 @@
       align-items: center;
       height: 150px;
     }
+
+    @media only screen and (max-width: 450px) {
+      body{
+        padding: 5px;
+      }
+      .round-head{
+        width: 130px;
+        height: 130px;
+        margin-right: 25px;
+      }
+      .round-text{
+        height: 130px;
+      }
+      .capsule-head{
+        padding: 10px;
+        width: 100%;
+        font-size: 20px;
+      }
+      #dataDriven{
+        margin-top: 40px;
+      }
+      #dataDriven tr:nth-child(odd){
+          background-color: #B7DAFF;
+      }
+      #dataDriven tr:nth-child(even){
+          background-color: #DADADA;
+      }
+      #dataDriven td{
+        padding: 10px 20px;
+        font-size: 17px;
+      }
+      #dataDriven tr td:nth-child(odd){
+        font-size: 20px;
+      }
+      #gameChange{
+        display: block;
+      }
+      #gameChange img{
+        width: 100%;
+        height: 300px;
+        padding: 0 75px;
+      }
+      #gameChangeContent{
+        padding: 25px;
+      }
+    }
   </style>
 
 </head>
@@ -106,13 +154,13 @@
               style="line-height: 60px; font-size: 2em;color : white">LegalMind</span></div>
         </a>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="https://www.legalmind.tech/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#footer" class="nav-link">Contact Us</a></li>
           <li class="nav-item"><a href="https://summarizer.legalmind.tech/" class="btn btn-primary ml-lg-4"
               target="_blank">Go To AI-Summariser</a>
@@ -128,20 +176,20 @@
     <p>Over the past few years, Big data Analytics has been successfully implemented and used across various sectors, industries like finance, healthcare, supply-chain, etc. Big Data analytics involves the use of analytics techniques like machine learning, data mining, natural language processing, and statistics. The data is extracted, prepared and blended to provide analysis for the businesses. Large enterprises and multinational organizations use these techniques widely these days in different ways. Big Data analytics tools and techniques are rising in demand due to the use of Big Data in businesses. Organizations can find new opportunities and gain new insights to run their business efficiently. These tools help in providing meaningful information for making better business decisions. The companies can improve their strategies by keeping in mind the customer focus. Big data analytics efficiently helps operations to become more effective. This helps in improving the profits of the company.</p>
     <p>According to a recent report from McKinney & Co., more than 40% of the businesses have implemented the use of Analytics and Artificial Intelligence in some of the other ways across the globe. With the growing Big Data in the legal sector, analytics can not just help professionals formulate better strategies but also minimize the efforts that are put in legal research. Here are a few ways in which litigation analytics can help lawyers and professionals in gaining trends and insights and satisfying their clients’ expectations.</p>
     <div class="my-5 clearfix">
-      <div class="round-head mr-5"><div class="round-text">STRATEGY</div></div>
+      <div class="round-head mr-lg-5"><div class="round-text">STRATEGY</div></div>
       <div class="">
         <p>Lawyers count on their past experiences to understand what will happen in the case, litigation analytics increases the chances by analysing events and patterns in the past with an increased magnitude of similar outcomes. The volumes of data provided by trained AI can help you understand how judges tend to rule on certain motions, opposing counsel’s record before a certain judge, a party’s tendency to settle, successful arguments, fact patterns, and other crucial information. Analytics can help legal professionals get a competitive edge by uncovering these patterns enabling data-driven decision making.</p>
       </div>  
     </div>
     <div class="my-5 clearfix">
       <div class="rect"></div>
-      <div class="round-head mr-5"><div class="round-text">PREDICTION</div></div>
+      <div class="round-head mr-lg-5"><div class="round-text">PREDICTION</div></div>
       <div class="">
         <p>AI systems can develop the capability of finding the likelihood of occurrence of an outcome by identifying patterns. Professionals can easily get an insight into the possible outcome of the case considering a fact pattern and judge’s opinions into account which offers new perspectives to the legal professionals. It can show connections between cases and can generate a statistical analysis for predictive modeling and identify relations between game-changing decisions that could make or break the case.</p>
       </div>  
     </div>
     <div class="my-5 clearfix">
-      <div class="round-head mr-5"><div class="round-text">MAKE CLIENTS HAPPIER</div></div>
+      <div class="round-head mr-lg-5"><div class="round-text">MAKE CLIENTS HAPPIER</div></div>
       <div class="">
         <p>Professionals can predict likely outcomes of a case preparing clients with various information such as expected costs incurred by the courts, no. of hearings expected and the expected time for the judgment to be disbursed. This information would make clients more connected and help lawyers in establishing a more trustworthy relation.</p>
       </div>  
@@ -169,7 +217,7 @@
   </tbody>
 </table>
 
-<div id="gameChange" class="d-flex">
+<div id="gameChange" class="">
   <img src="./assets/images/vision images/gameChange.png">
   <div id="gameChangeContent">
     <h3>Build game changing strategies and win more cases. Identify predictable in the unpredictable with LegalMind</h3>
