@@ -118,7 +118,7 @@ a:hover {
 
 #navbarNav .pri-menu li{
   padding: 5px 15px;
-  width: 200px;
+  width: 100%;
 }
 
 #prodMenu li:hover{
@@ -142,7 +142,6 @@ a:hover {
   padding: 5px 15px;
   width: 200px;
 }
-
 
 /* Scroll Down */
 .bg {
@@ -617,6 +616,22 @@ a:hover {
 
 /*Potrait Phone*/
 @media only screen and (max-width: 768px) {
+  #navbarNav{
+    position: absolute;
+    top: 70;
+    left: 0;
+    z-index: 10;
+    background-color: #303FB1;
+    width: 100%;
+    padding: 30px 20px;
+    transition: height 0.15s !important;
+  }
+
+  .col{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }  
+
   .client-info {
     position: relative;
     top: -10px;
@@ -1120,7 +1135,7 @@ a:active {
 #bs-collapse .panel-heading.active a:after {
   content: '\e909';
   transform: scale(1);
-  transition: all 0.5s;
+  transition: all .5s;
 }
 
 /* #accordion rotate icon option */
