@@ -583,18 +583,31 @@
       duration:1000
       });
 
-    if($(window).width() < 1200) {
+    $(document).ready(function(){
+      if($(window).width() < 1200) {
         $("#feature2 .cta-device").insertAfter("#feature2 .cta-content");
         $("#feature4 .cta-device").insertAfter("#feature4 .cta-content");
-    }
+      }
 
-    if($(window).width() <= 768) {
-        $('#prodMenu').addClass('d-none');
-        $('#featuresHead .mobFeaturesHead').html('<br>');
-        $('#prod').click(function(){
-          $('#prodMenu').toggleClass('d-none');
+      if($(window).width() <= 768) {
+          $('#prodMenu').addClass('d-none');
+          $('#featuresHead .mobFeaturesHead').html('<br>');
+          $('#prod').click(function(){
+            $('#prodMenu').toggleClass('d-none');
+            // $('#prodMenu').slideToggle();
+          });
+      }
+
+      $('#prod').mouseover(function(){
+        $('#prodMenu').css('display', 'block');
+      });
+      $('#prodMenu').mouseout(function(){
+        $('#prod').mouseout(function(){
+          $('#prodMenu').css('display', 'none');
         });
-    }
+      });
+
+    });
 
     var typed1 = new Typed('#typedElem1', {
       strings: ['way', 'smarter way'.bold()],
@@ -628,17 +641,7 @@
 
     var opt5 = typed3.options
     opt5.strings = ['Analyser']
-    var typed5 = new Typed('#typedElem5', opt5);
-
-    $('#prod').mouseover(function(){
-      $('#prodMenu').css('display', 'block');
-    });
-    $('#prodMenu').mouseout(function(){
-      $('#prod').mouseout(function(){
-        $('#prodMenu').css('display', 'none');
-      });
-    });
-    
+    var typed5 = new Typed('#typedElem5', opt5);    
 
 </script>
 </body>
